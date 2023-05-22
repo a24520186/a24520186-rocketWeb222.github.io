@@ -1,0 +1,619 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+$blue100: #e6ebff;
+$blue200: #bfc9f0;
+$blue300: #a6b6f1;
+$blue400: #7f94e2;
+
+$violet100: #f5f1ff;
+$violet200: #eee6ff;
+$violet300: #cab2f1;
+$violet400: #b28fea;
+
+$yellow: #ffeea3;
+$orange: #ffd887;
+
+$neutral100: #f8f9fd;
+$neutral200: #f0f0f0;
+$neutral300: #e0e0e0;
+$neutral400: #cdcdcd;
+$neutral500: #9a9a9a;
+$neutral600: #757575;
+$neutral700: #363636;
+
+@mixin desktop {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 428px) {
+    @content;
+  }
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+div.surround {
+  // display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  @include mobile() {
+    display: block;
+  }
+
+  div.container {
+    @include mobile() {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav {
+      ul.top-menu {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        li {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  height: 2000px;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  color: $neutral700;
+  h1 {
+    width: 0%;
+  }
+}
+
+div.container {
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0px;
+  left: 0px;
+  top: 0px; /* Neutral/White */
+  background: #ffffff;
+  backdrop-filter: blur(4px);
+
+  ul.top-menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+  }
+}
+
+div.banner {
+  // display: none;
+  left: 0px;
+  top: 64px;
+  background-image: url(../images/banner/banner-bg.png);
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
+  padding-bottom: 80px;
+
+  @include mobile() {
+    display: none;
+  }
+
+  div.banner-middle {
+    padding-top: 150px;
+  }
+}
+
+div.bannerMobile {
+  display: none;
+  @include mobile() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include mobile() {
+    display: block;
+  }
+  div.bannerMobilePic2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10px 30px 10px;
+    background: url(../images/banner/banner-bg.png);
+  }
+}
+
+div.aboutRocket {
+  @include mobile() {
+    display: none;
+  }
+  background-color: $blue100;
+  height: 712px;
+  left: 0px;
+  top: 799px;
+  padding: 50px 0px 0px 70px; //上右下左
+  display: flex;
+
+  border-radius: 40px;
+  margin-top: -22px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  div.aboutRocketLeft {
+    margin-right: 100px;
+  }
+
+  p.AboutRocket {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    // text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Neutral/Nuetral 700 */
+
+    color: #363636;
+  }
+
+  p.whatIsRocket {
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    // line-height: 150%;
+    /* identical to box height, or 72px */
+
+    // text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Neutral/Nuetral 700 */
+
+    color: #363636;
+  }
+
+  p {
+    line-height: 150%;
+  }
+
+  p.p1 {
+    padding-top: 50px;
+    // max-width: 700px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  p.p2 {
+    padding-top: 50px;
+    // max-width: 700px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  div.aboutPhoto {
+    display: flex;
+
+    flex-wrap: wrap;
+    padding: 0px 10px 10px 0px;
+    height: 600px;
+    overflow-y: auto;
+
+    img.img2 {
+      padding: 30px 0px 30px 0px;
+    }
+  }
+}
+
+div.aboutRocketMobile {
+  display: none;
+  background-color: $blue100;
+  border-radius: 25px;
+  padding-top: 20px;
+
+  @include mobile() {
+    display: block;
+  }
+  div.aboutRocketMobileContent {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 36px 52px;
+
+    div.whatIs {
+      width: 520px;
+      width: 100%;
+      margin-bottom: 24px;
+
+      p.whatIsEn {
+        font-size: 20px;
+        font-size: 16px;
+        padding-bottom: 10px;
+      }
+
+      h2.whatIsCh {
+        font-size: 35px;
+        vertical-align: middle;
+        padding-bottom: 30px;
+      }
+
+      p.description {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 30px;
+      }
+    }
+
+    div {
+      img {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+div.success {
+  margin-bottom: 80px;
+  width: 100%;
+
+  div.successText {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Heading/desktop/H2 */
+
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    /* identical to box height, or 54px */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Neutral/Nuetral 700 */
+
+    color: #363636;
+  }
+
+  div.photos8pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      padding: 20px 0px 20px 50px;
+    }
+  }
+}
+
+div.aboutClass {
+  @include mobile() {
+    display: none;
+  }
+
+  background-color: $neutral100;
+  height: 2500px;
+
+  div.aboutClassText {
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    /* identical to box height, or 54px */
+
+    text-align: center;
+
+    letter-spacing: 0.02em;
+
+    /* Neutral/Nuetral 700 */
+
+    color: #363636;
+  }
+
+  div.aboutClassDate {
+    height: 58px;
+
+    background: #ffffff;
+    box-shadow: 0px 2px 4px #e8e8e8;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p.aboutClassDateText {
+      text-align: center;
+    }
+  }
+}
+
+div.aboutClass3pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img {
+    padding-top: 70px;
+  }
+}
+
+div.aboutClassMobile {
+  display: none;
+  @include mobile() {
+    display: block;
+  }
+
+  div.organizerMobilePic {
+    background-color: $neutral300;
+  }
+
+  div.coach {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    background-color: $neutral100;
+
+    img {
+      padding: 0px 10px 0px 10px;
+    }
+  }
+
+  div.intro {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: $neutral100;
+  }
+
+  div.GoPic {
+    img {
+      padding-left: 50px;
+      padding-top: 20px;
+    }
+  }
+
+  div.container {
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -28px;
+
+    width: 100%;
+    background-color: $neutral100;
+    font-size: 16px;
+
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  h3 {
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+
+  div.classFeeTextMob {
+    color: #363636;
+    padding: 20px 0px 20px 30px;
+
+    h3 {
+      padding-top: 30px;
+    }
+
+    div.classPic3 {
+      div {
+        img {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+div.coachText {
+  /* Heading/desktop/H3 */
+
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  /* identical to box height, or 48px */
+
+  // text-align: center;
+  letter-spacing: 0.02em;
+
+  /* Neutral/Nuetral 700 */
+
+  color: #363636;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  padding: 60px 0px 40px 330px;
+}
+
+div.coach {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+
+  img {
+    padding: 0px 10px 0px 10px;
+  }
+}
+
+div.intro {
+  padding-left: 300px;
+
+  div.introText {
+    padding-bottom: 20px;
+
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    /* identical to box height, or 36px */
+
+    letter-spacing: 0.02em;
+
+    /* Neutral/Nuetral 700 */
+
+    color: #363636;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  ul {
+    padding-left: 15px;
+
+    li {
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 175%;
+      /* or 28px */
+
+      letter-spacing: 0.02em;
+
+      /* Neutral/Nuetral 700 */
+
+      color: #363636;
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+
+      a {
+        color: black;
+      }
+
+      a.president {
+        color: black;
+      }
+    }
+  }
+  div.click {
+    padding-top: 80px;
+  }
+
+  div.classfee {
+    padding-top: 80px;
+  }
+
+  div.classProcess {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+}
+
+div.organizer {
+  height: 382px;
+  left: 0px;
+  // top: 6001px;
+
+  /* Neutral/Neutral 200 */
+
+  background: #f0f0f0;
+
+  p.organizerText {
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    /* identical to box height, or 48px */
+
+    letter-spacing: 0.02em;
+
+    /* Neutral/Nuetral 700 */
+
+    color: #363636;
+    padding-left: 72px;
+    padding-bottom: 50px;
+  }
+  div.organizerPic7 {
+    padding-left: 100px;
+    display: flex;
+    padding-bottom: 100px;
+    img {
+      padding-left: 15px;
+    }
+  }
+}
+
+div.footer {
+  p.footerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

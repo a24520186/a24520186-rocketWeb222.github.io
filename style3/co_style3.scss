@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+$blue100: #e6ebff;
+$blue200: #bfc9f0;
+$blue300: #a6b6f1;
+$blue400: #7f94e2;
+
+$violet100: #f5f1ff;
+$violet200: #eee6ff;
+$violet300: #cab2f1;
+$violet400: #b28fea;
+
+$yellow: #ffeea3;
+$orange: #ffd887;
+
+$neutral100: #f8f9fd;
+$neutral200: #f0f0f0;
+$neutral300: #e0e0e0;
+$neutral400: #cdcdcd;
+$neutral500: #9a9a9a;
+$neutral600: #757575;
+$neutral700: #363636;
+
+@mixin desktop {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 428px) {
+    @content;
+  }
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+div.surround {
+  // display: none;
+  //   position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  @include mobile() {
+    display: block;
+  }
+
+  div.container {
+    @include mobile() {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav {
+      ul.top-menu {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        li {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  // height: 2000px;
+  //   margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  color: $neutral700;
+  h1 {
+    width: 0%;
+  }
+}
+
+div.container {
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0px;
+  left: 0px;
+  top: 0px; /* Neutral/White */
+  background: #ffffff;
+  backdrop-filter: blur(4px);
+
+  ul.top-menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+  }
+}
+
+div.banner {
+  // display: none;
+  left: 0px;
+  top: 64px;
+  background-image: url(../images/banner/banner-bg.png);
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
+  // padding-bottom: 80px;
+
+  @include mobile() {
+    display: none;
+  }
+
+  div.banner-middle {
+    padding-top: 150px;
+  }
+}
+
+div.bannerMobile {
+  display: none;
+  @include mobile() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include mobile() {
+    display: block;
+  }
+  div.bannerMobilePic2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10px 30px 10px;
+    background: url(../images/banner/banner-bg.png);
+  }
+}
+
+div.aboutUs {
+  div.aboutUsPic {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+div {
+  h3 {
+    @include mobile() {
+      display: block;
+    }
+    text-align: center;
+    padding: 80px 0px 80px 0px;
+  }
+}
+
+div.shareSpace {
+  @include mobile() {
+    display: none;
+  }
+
+  padding-left: 220px;
+
+  span {
+    img.share3 {
+      padding-left: 80px;
+      padding-bottom: 130px;
+    }
+
+    img.share4 {
+      margin-bottom: 130px;
+    }
+
+    img.share5 {
+      padding-top: 60px;
+    }
+
+    img.share6 {
+      padding-top: 80px;
+    }
+
+    img.share7 {
+      padding-bottom: 80px;
+    }
+  }
+
+  div.sharePic {
+    img.share1 {
+      padding-left: 50px;
+      padding-bottom: 30px;
+    }
+  }
+
+  span {
+    img {
+      padding-left: 50px;
+    }
+  }
+
+  div.container {
+    div.sharePic {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  div.service {
+    img.servicePic {
+      padding-left: 50px;
+      padding-top: 70px;
+    }
+  }
+}
+
+div.shareSpaceMobile {
+  display: none;
+  @include mobile() {
+    display: block;
+  }
+
+  img.share2 {
+    padding-left: 30px;
+    width: 400px;
+  }
+  img.share3 {
+    padding-left: 30px;
+    width: 400px;
+  }
+  img.share4 {
+    padding-left: 30px;
+    width: 400px;
+  }
+  img.share5 {
+    padding-left: 30px;
+    width: 400px;
+  }
+  img.share6 {
+    padding-left: 30px;
+    width: 400px;
+  }
+  img.share7 {
+    padding-left: 30px;
+    width: 400px;
+  }
+
+  div.container {
+    div.sharePic {
+      img.share1 {
+        padding-left: 30px;
+        padding-bottom: 15px;
+      }
+    }
+
+    div.service {
+      img.servicePic {
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+div.bottom {
+  div.bottomImg {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+div.footer {
+  p.footerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

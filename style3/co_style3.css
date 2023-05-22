@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+div.surround {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+@media (max-width: 428px) {
+  div.surround {
+    display: block;
+  }
+}
+@media (max-width: 428px) {
+  div.surround div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+div.surround div.container nav ul.top-menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+div.surround div.container nav ul.top-menu li {
+  margin-right: 32px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #363636;
+}
+main h1 {
+  width: 0%;
+}
+
+div.container {
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0px;
+  left: 0px;
+  top: 0px; /* Neutral/White */
+  background: #ffffff;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+div.container ul.top-menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+div.banner {
+  left: 0px;
+  top: 64px;
+  background-image: url(../images/banner/banner-bg.png);
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
+}
+@media (max-width: 428px) {
+  div.banner {
+    display: none;
+  }
+}
+div.banner div.banner-middle {
+  padding-top: 150px;
+}
+
+div.bannerMobile {
+  display: none;
+}
+@media (max-width: 428px) {
+  div.bannerMobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 428px) {
+  div.bannerMobile {
+    display: block;
+  }
+}
+div.bannerMobile div.bannerMobilePic2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10px 30px 10px;
+  background: url(../images/banner/banner-bg.png);
+}
+
+div.aboutUs div.aboutUsPic img {
+  width: 100%;
+  height: auto;
+}
+
+div h3 {
+  text-align: center;
+  padding: 80px 0px 80px 0px;
+}
+@media (max-width: 428px) {
+  div h3 {
+    display: block;
+  }
+}
+
+div.shareSpace {
+  padding-left: 220px;
+}
+@media (max-width: 428px) {
+  div.shareSpace {
+    display: none;
+  }
+}
+div.shareSpace span img.share3 {
+  padding-left: 80px;
+  padding-bottom: 130px;
+}
+div.shareSpace span img.share4 {
+  margin-bottom: 130px;
+}
+div.shareSpace span img.share5 {
+  padding-top: 60px;
+}
+div.shareSpace span img.share6 {
+  padding-top: 80px;
+}
+div.shareSpace span img.share7 {
+  padding-bottom: 80px;
+}
+div.shareSpace div.sharePic img.share1 {
+  padding-left: 50px;
+  padding-bottom: 30px;
+}
+div.shareSpace span img {
+  padding-left: 50px;
+}
+div.shareSpace div.container div.sharePic {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+div.shareSpace div.service img.servicePic {
+  padding-left: 50px;
+  padding-top: 70px;
+}
+
+div.shareSpaceMobile {
+  display: none;
+}
+@media (max-width: 428px) {
+  div.shareSpaceMobile {
+    display: block;
+  }
+}
+div.shareSpaceMobile img.share2 {
+  padding-left: 30px;
+  width: 400px;
+}
+div.shareSpaceMobile img.share3 {
+  padding-left: 30px;
+  width: 400px;
+}
+div.shareSpaceMobile img.share4 {
+  padding-left: 30px;
+  width: 400px;
+}
+div.shareSpaceMobile img.share5 {
+  padding-left: 30px;
+  width: 400px;
+}
+div.shareSpaceMobile img.share6 {
+  padding-left: 30px;
+  width: 400px;
+}
+div.shareSpaceMobile img.share7 {
+  padding-left: 30px;
+  width: 400px;
+}
+div.shareSpaceMobile div.container div.sharePic img.share1 {
+  padding-left: 30px;
+  padding-bottom: 15px;
+}
+div.shareSpaceMobile div.container div.service img.servicePic {
+  padding-left: 30px;
+}
+
+div.bottom div.bottomImg img {
+  width: 100%;
+}
+
+div.footer p.footerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}/*# sourceMappingURL=co_style3.css.map */
